@@ -7,6 +7,7 @@ export interface UserType {
 }
 
 export interface RepoType {
+  fork: boolean;
   stargazers_count: number;
   watchers_count: number;
   language: string;

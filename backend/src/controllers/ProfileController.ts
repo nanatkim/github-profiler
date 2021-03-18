@@ -26,22 +26,24 @@ const show = async (req: Request, res: Response) => {
       };
 
       reposResponse.data.map((repo) => {
-        reposData.forks = reposData.forks += repo.forks_count;
-        reposData.stars = reposData.stars += repo.stargazers_count;
-        reposData.watchers = reposData.watchers += repo.watchers_count;
+        if (!repo.fork) {
+          reposData.forks = reposData.forks += repo.forks_count;
+          reposData.stars = reposData.stars += repo.stargazers_count;
+          reposData.watchers = reposData.watchers += repo.watchers_count;
 
-        if (repo.language !== null) {
-          const index = reposData.languages.findIndex(
-            (lang) => lang.name === repo.language
-          );
+          if (repo.language !== null) {
+            const index = reposData.languages.findIndex(
+              (lang) => lang.name === repo.language
+            );
 
-          if (index > -1) {
-            reposData.languages[index].count += 1;
-          } else {
-            reposData.languages.push({
-              name: repo.language,
-              count: 1,
-            });
+            if (index > -1) {
+              reposData.languages[index].count += 1;
+            } else {
+              reposData.languages.push({
+                name: repo.language,
+                count: 1,
+              });
+            }
           }
         }
       });
