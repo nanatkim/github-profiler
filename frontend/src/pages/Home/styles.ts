@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BiRightArrow } from "react-icons/bi";
 
 export const Container = styled.div`
   height: 100%;
@@ -27,17 +28,26 @@ export const SearchForm = styled.form`
 
   input {
     padding: 1rem;
-    width: 150px;
+    width: 120px;
 
     &:focus {
       outline: none;
     }
   }
 
-  span {
+  @media (min-width: 768px) {
+    input {
+      width: 150px;
+    }
+  }
+`;
+
+export const ArrowIcon = styled(BiRightArrow)`
+  margin: 0.5rem;
+  fill: var(--primary);
+  cursor: pointer;
+
+  @media (min-width: 768px) {
     font-size: 1.5rem;
-    margin: .5rem;
-    color: var(--primary);
-    cursor: pointer;
   }
 `;

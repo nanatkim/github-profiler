@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import { Container, Wrapper, SearchForm } from "./styles";
+import { Container, Wrapper, SearchForm, ArrowIcon } from "./styles";
 
 const Home: React.FC = () => {
   const [search, setSearch] = useState("");
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             value={search}
             onChange={(e) => setSearch(e.currentTarget.value)}
           />
-          <span onClick={handleSubmit}>▷</span>
+          <ArrowIcon onClick={handleSubmit} />
         </SearchForm>
       </Wrapper>
     </Container>
