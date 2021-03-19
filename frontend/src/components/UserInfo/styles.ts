@@ -6,7 +6,7 @@ import { AiOutlineFork, AiOutlineEye } from "react-icons/ai";
 export const Container = styled.div`
   padding: 1rem;
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1025px) {
     padding: 0;
     margin-bottom: 1rem;
   }

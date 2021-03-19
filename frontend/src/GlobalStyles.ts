@@ -29,5 +29,6 @@ export default createGlobalStyle`
     --black: #1b1f23;
     --border: #e1e4e8;
     --gray: #6a737d;
+    --orange: #ff9f4d;
   }
 `;
