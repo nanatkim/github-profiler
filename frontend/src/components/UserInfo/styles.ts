@@ -4,7 +4,12 @@ import { RiGroupLine, RiBookMarkLine } from "react-icons/ri";
 import { AiOutlineFork, AiOutlineEye } from "react-icons/ai";
 
 export const Container = styled.div`
-  margin: 1rem;
+  padding: 1rem;
+
+  @media (min-width: 1080px) {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Section = styled.div`
