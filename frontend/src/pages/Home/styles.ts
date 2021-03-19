@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
-  position: relative;
+  height: 100%;
 `;
 
 export const Wrapper = styled.div`
@@ -38,7 +37,7 @@ export const SearchForm = styled.form`
   span {
     font-size: 1.5rem;
     margin: .5rem;
-    color: var(--blue);
+    color: var(--primary);
     cursor: pointer;
   }
 `;

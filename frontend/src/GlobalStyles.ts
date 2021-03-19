@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   html {
     min-height: 100%;
-    background: var(--primary);
+    background: var(--white);
   }
 
   *, button, input {
@@ -24,9 +24,9 @@ export default createGlobalStyle`
   }
   
   :root {
+    --primary: #2b7489;
     --white: #fff;
     --black: #1b1f23;
     --border: #e1e4e8;
-    --blue: #2b7489;
   }
 `;
