@@ -20,7 +20,7 @@ const show = async (req: Request, res: Response) => {
       user = {
         name: userResponse.data.name,
         login: userResponse.data.login,
-        url: userResponse.data.url,
+        avatar_url: userResponse.data.avatar_url,
         followers: userResponse.data.followers,
         public_repos: userResponse.data.public_repos,
       };

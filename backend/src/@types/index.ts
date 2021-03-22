@@ -1,7 +1,7 @@
 export interface UserType {
   name: string;
   login: string;
-  url: string;
+  avatar_url: string;
   followers: number;
   public_repos: number;
 }
