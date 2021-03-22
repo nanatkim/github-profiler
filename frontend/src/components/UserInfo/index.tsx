@@ -1,4 +1,5 @@
 import React from "react";
+import { UserData } from "../../hooks/profile";
 
 import {
   Container,
@@ -15,38 +16,46 @@ import {
   EyeIcon,
 } from "./styles";
 
-const UserInfo: React.FC = () => {
+const UserInfo: React.FC<UserData> = ({
+  name,
+  avatar_url,
+  followers,
+  public_repos,
+  stars,
+  watchers,
+  forks,
+}) => {
   return (
     <Container>
       <Section>
         <Head>
-          octocat's profile
+          {name}'s profile
           <EditIcon />
           <RefreshIcon />
         </Head>
       </Section>
       <Section>
-        <Avatar src={"http://github.com/nanatkim.png"} />
+        <Avatar src={avatar_url} />
         <Info>
           <span>
             <PeopleIcon />
-            10 followers
+            {followers} followers
           </span>
           <span>
             <RepoIcon />
-            10 public repositories
+            {public_repos} public repositories
           </span>
           <span>
             <StarIcon />
-            10 stars
+            {stars} stars
           </span>
           <span>
             <EyeIcon />
-            10 watchers
+            {watchers} watchers
           </span>
           <span>
             <ForkIcon />
-            10 forks
+            {forks} forks
           </span>
         </Info>
       </Section>

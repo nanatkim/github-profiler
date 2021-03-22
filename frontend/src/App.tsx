@@ -5,16 +5,19 @@ import Profile from "./pages/Profile";
 
 import GlobalStyles from "./GlobalStyles";
 import Header from "./components/Header";
+import { ProfileProvider } from "./hooks/profile";
 
 function App() {
   return (
     <Router>
       <Header />
-      
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/:username" component={Profile} />
-      </Switch>
+
+      <ProfileProvider>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/:username" component={Profile} />
+        </Switch>
+      </ProfileProvider>
 
       <GlobalStyles />
     </Router>
